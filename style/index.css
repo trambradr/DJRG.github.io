@@ -1,0 +1,319 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+
+/* 整个块级头为红色，超出部分隐藏，高度为100vh＋200px，宽度为网页宽度 */
+header {
+    display: block;
+    width: 100%;
+    height: calc(100vh + 200px);
+    overflow: hidden;
+    background: #862617;
+    scroll-snap-align: start;
+}
+
+/* 第一屏开屏画面 */
+.cover {
+    /* background: url("../images/囍裁剪.png"); */
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    display: block;
+    width: 80%;
+    height: calc(100vh + 200px);
+    /* height: 800px; */
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.cover div {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/囍裁剪.png") no-repeat;
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+}
+
+@font-face {
+    font-family: "优设标题黑";
+    src: url("../fonts/优设标题黑.ttf");
+}
+
+.cover div h1 {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 45%;
+    font-size: 2rem;
+    transform: translate(-50%, 0);
+    font-weight: 400;
+    letter-spacing: 30px;
+    color: #ffffff;
+    font-family: "优设标题黑";
+}
+
+.invisible {
+    opacity: 0;
+}
+
+@keyframes bgFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.bigtitle {
+    animation: bgFadeIn .8s forwards;
+}
+
+.hdTitleIn {
+    animation: bgFadeIn .8s ease forwards;
+}
+
+@keyframes bgFadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.hdTitleOut {
+    animation: bgFadeOut .3s ease forwards;
+}
+
+
+article {
+    scroll-snap-type: y mandatory;
+}
+
+.part-One {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.part1 {
+    background: url("../images/囍裁剪.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 200px;
+}
+
+.chat{
+    padding: 10vh 25vw 40vh;
+    height: 130vh;
+}
+
+.chat-right,.chat-left{
+    /* background-color: #EDCB96; */
+    background-color: rgba(237, 203, 150, 0.8);
+    border: 5px solid #CF4813;
+    box-shadow: 10px 10px 10px 5px #000000;
+    border-radius: 3em;
+    background-attachment: scroll;
+    padding: 1rem 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 25vw;
+    height: auto;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.chat-left{
+    margin-left: auto;
+}
+
+.chat-right{
+    margin-right: auto;
+}
+
+.text-view,.text {
+    /* background-color: rgba(237, 203, 150,0.5); */
+    /* border: 5px solid #CF4813; */
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    background-attachment: scroll;
+    padding: 1rem 3rem;
+    margin: auto;
+    max-width: 50vw;
+    position: relative;
+    height: auto;
+    max-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.data{
+    padding: 20px;
+}
+
+.text-1 {
+    font-size: 1.3em;
+    font-family: sans-serif;
+    color: #000000;
+}
+
+.text-2{
+    font-size: large;
+    text-indent: 2em;
+    line-height: 2.5em;
+}
+
+.text-data{
+    position: absolute;
+}
+
+.text-background{
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 200px;
+}
+
+.hd1 div,.hd2 div {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.hd1 div{
+    background-image: url("../images/没色樱花车裁剪.png");
+    background-size: cover;
+    background-position: top;
+    max-width: 60vw;
+}
+
+.hd1 div:hover{
+    background-image: url("../images/樱花追车裁剪.png");
+}
+
+.hd2 div{
+    background-image: url("../images/新婚快乐裁剪.png");
+    background-size: cover;
+}
+
+.part2 {
+    background: url("");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.img1{
+    height: 80vh;
+    display: flex;
+}
+
+.img1-img1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.three:hover{
+    background-image: url('../images/三样裁剪.png');
+    background-size: contain;
+}
+
+.text-img1{
+    margin: auto;
+    width: 40%;
+    padding: 1rem 3rem;
+}
+
+.part3 {
+    background: url("../images/新婚快乐裁剪.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.part4 {
+    background: #862617;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.part5 {
+    background: url("");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction:column ;
+}
+
+
+.part-Two,
+.part-Three {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
