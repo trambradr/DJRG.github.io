@@ -120,36 +120,38 @@ article {
     flex: 200px;
 }
 
-.chat{
-    padding: 10vh 25vw 40vh;
+.chat {
+    padding: 10vh 15vw 40vh;
     height: 130vh;
 }
 
-.chat-right,.chat-left{
+.chat-right,
+.chat-left {
     /* background-color: #EDCB96; */
     background-color: rgba(237, 203, 150, 0.8);
     border: 5px solid #CF4813;
     box-shadow: 10px 10px 10px 5px #000000;
     border-radius: 3em;
     background-attachment: scroll;
-    padding: 1rem 3rem;
+    padding: 1em 3em;
     margin-top: auto;
     margin-bottom: auto;
-    max-width: 25vw;
+    max-width: 20vw;
     height: auto;
     max-height: 80vh;
     overflow: auto;
 }
 
-.chat-left{
+.chat-left {
     margin-left: auto;
 }
 
-.chat-right{
+.chat-right {
     margin-right: auto;
 }
 
-.text-view,.text {
+.text-view,
+.text {
     /* background-color: rgba(237, 203, 150,0.5); */
     /* border: 5px solid #CF4813; */
     /* background-color: rgba(0, 0, 0, 0.4); */
@@ -165,7 +167,7 @@ article {
     overflow: auto;
 }
 
-.data{
+.data {
     padding: 20px;
 }
 
@@ -175,17 +177,17 @@ article {
     color: #000000;
 }
 
-.text-2{
+.text-2 {
     font-size: large;
     text-indent: 2em;
     line-height: 2.5em;
 }
 
-.text-data{
+.text-data {
     position: absolute;
 }
 
-.text-background{
+.text-background {
     background-color: rgba(0, 0, 0, 0.6);
     background-size: contain;
     background-position: center;
@@ -202,7 +204,8 @@ article {
     flex: 200px;
 }
 
-.hd1 div,.hd2 div {
+.hd1 div,
+.hd2 div {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -213,18 +216,17 @@ article {
     opacity: 0;
 }
 
-.hd1 div{
-    background-image: url("../images/没色樱花车裁剪.png");
+.hd1 div {
+    background-image: url("../images/part1.jpg");
     background-size: cover;
-    background-position: top;
-    max-width: 60vw;
+    background-position: center;
 }
 
-.hd1 div:hover{
+/* .hd1 div:hover{
     background-image: url("../images/樱花追车裁剪.png");
-}
+} */
 
-.hd2 div{
+.hd2 div {
     background-image: url("../images/新婚快乐裁剪.png");
     background-size: cover;
 }
@@ -241,12 +243,22 @@ article {
     display: flex;
 }
 
-.img1{
+.img1 {
     height: 80vh;
     display: flex;
 }
 
-.img1-img1{
+.img4{
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    background-image: url("../images/开心金手镯裁剪.png"),url("../images/出轨裁剪.png"),url("../images/放贷威胁裁剪.png"),url("../images/生活开销裁剪.png");
+    background-repeat: no-repeat;
+    background-size: auto 36vh;
+    background-position: top right,top left,bottom right,bottom left;
+}
+
+.img1-img1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -257,15 +269,23 @@ article {
     overflow: hidden;
 }
 
-.three:hover{
+.three:hover {
     background-image: url('../images/三样裁剪.png');
     background-size: contain;
 }
 
-.text-img1{
+.text-img1 {
     margin: auto;
     width: 40%;
     padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-img1-data {
+    margin: auto;
+    padding: 1rem 3rem;
+
 }
 
 .part3 {
@@ -285,7 +305,10 @@ article {
 
 .part4 {
     background: #862617;
-    background-size: cover;
+    background-image: url("../images/开心金手镯裁剪.png"),url("../images/出轨裁剪.png"),url("../images/放贷威胁裁剪.png"),url("../images/生活开销裁剪.png");
+    background-repeat: no-repeat;
+    background-size: auto 36vh;
+    background-position: top right 20vw ,top left 20vw,bottom right 20vw,bottom left 20vw;
     background-attachment: fixed;
     height: 100vh;
     scroll-snap-align: start;
@@ -305,12 +328,13 @@ article {
     justify-content: center;
     position: relative;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
 }
 
 
 .part-Two,
-.part-Three {
+.part-Three,
+.part-Four {
     height: 100vh;
     display: flex;
     justify-content: center;
