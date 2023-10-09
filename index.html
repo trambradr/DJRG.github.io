@@ -112,7 +112,7 @@
                     彩礼本扎根于中华文化，以一种约定俗成的习俗被代代相传。但随着社会的转型与思想的解放，处于新旧夹缝中的彩礼被推上了风口浪尖，不管在现实生活还是网络讨论中均引发了巨大的矛盾。<br>
                 </p>
             </div>
-            <div id="" style="height: 100vh;width: 60vw;"></div>
+            <div id="money" style="height: 100vh;width: 60vw;"></div>
         </div>
     </article>
 
@@ -965,6 +965,100 @@
             }
         }
         mypeople.setOption(peopleoption)
+    </script>
+
+    <!-- 平均彩礼 -->
+    <script>
+        let mymoney = echarts.init(document.getElementById('money'), 'essos')
+        // $.get('js/china.json', function (chinaJson) {
+        //     echarts.registerMap('chinaMap', chinaJson)
+        //     let option = {
+        //     geo:{
+        //         type: 'map',
+        //         map: 'chinaMap'
+        //     }
+        // }
+        // myChart.setOption(option)
+        // })
+
+        let data2 = [
+                    { name: '河南省', value: 5.6 },
+                    { name: '甘肃省', value: 6.2 },
+                    { name: '安徽省', value: 6.4 },
+                    { name: '河北省', value: 4.6 },
+                    { name: '山东省', value: 6.3 },
+                    { name: '陕西省', value: 7.3 },
+                    { name: '江苏省', value: 5.2 },
+                    { name: '山西省', value: 9.3 },
+                    { name: '江西省', value: 7.3 },
+                    { name: '湖南省', value: 7.2 },
+                    { name: '吉林省', value: 2.8 },
+                    { name: '辽宁省', value: 9 },
+                    { name: '浙江省', value: 18.3 },
+                    { name: '湖北省', value: 6.1 },
+                    { name: '福建省', value: 13.1 },
+                    { name: '贵州省', value: 8.9 },
+                    { name: '内蒙古自治区', value: 11 },
+                    { name: '四川省', value: 3.8 },
+                    { name: '黑龙江省', value: 15.2 },
+                    { name: '宁夏回族自治区', value: 6.7 },
+                    { name: '云南省', value: 8.5 },
+                    { name: '青海省', value: 6.9 },
+                    { name: '重庆市', value: 2.9 },
+                    { name: '广西壮族自治区', value: 3.1 },
+                    { name: '广东省', value: 3.9 },
+                    { name: '上海市', value: 7.2 },
+                    { name: '北京市', value: 6.3 },
+                    { name: '天津市', value: 7.7 },
+                    { name: '新疆维吾尔自治区', value: 2.8 },
+                    { name: '海南省', value: 1.1 },
+                    { name: '西藏自治区', value: 0 },
+                ];
+
+        echarts.registerMap('chinaMap', chinaDate)
+        let moneyoption = {
+            title: {
+                text: '各地彩礼平均金额',
+                subtext: '单位/万元'
+            },
+            tooltip: {
+                show: true,
+            },
+            series: {
+                type: 'map',
+                name: '各地彩礼平均金额',
+                map: 'chinaMap',
+                data: data2,
+
+                toolbox: {
+                    feature: {
+                        magicType: {
+                            type: ['bar', 'map']
+                        }
+                    }
+                },
+                roam: true, //允许拖动
+
+                label: {
+                    show: true, //展示名称
+                },
+
+                selectedMode: 'single',
+                zoom: 1,     //设置初始缩放比例
+                // center: [] 设置初始中心
+
+                labelLayout: {
+                    hideOverlap: true,
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                    }
+                },
+
+            }
+        }
+        mymoney.setOption(moneyoption)
     </script>
 </body>
 
