@@ -19,7 +19,7 @@ header {
     background-position: top;
     position: relative;
     display: block;
-    width: 80%;
+    width: 100%;
     height: calc(100vh + 200px);
     /* height: 800px; */
     overflow: hidden;
@@ -30,7 +30,7 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url("../images/囍裁剪.png") no-repeat;
+    background: url("../images/1.png") no-repeat;
     background-size: cover;
     background-position: top;
     text-align: center;
@@ -205,7 +205,10 @@ article {
 }
 
 .hd1 div,
-.hd2 div {
+.hd2 div,
+.hd3 div,
+.hd4 div {
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -217,9 +220,8 @@ article {
 }
 
 .hd1 div {
-    background-image: url("../images/part1.jpg");
-    background-size: cover;
-    background-position: center;
+    background-image: url("../images/2.png");
+
 }
 
 /* .hd1 div:hover{
@@ -227,8 +229,15 @@ article {
 } */
 
 .hd2 div {
-    background-image: url("../images/新婚快乐裁剪.png");
-    background-size: cover;
+    background-image: url("../images/3.png");
+}
+
+.hd3 div {
+    background-image: url("../images/4.png");
+}
+
+.hd4 div {
+    background-image: url("../images/5.png");
 }
 
 .part2 {
@@ -248,14 +257,14 @@ article {
     display: flex;
 }
 
-.img4{
+.img4 {
     height: 100vh;
     width: 60vw;
     display: flex;
-    background-image: url("../images/开心金手镯裁剪.png"),url("../images/出轨裁剪.png"),url("../images/放贷威胁裁剪.png"),url("../images/生活开销裁剪.png");
+    background-image: url("../images/开心金手镯裁剪.png"), url("../images/出轨裁剪.png"), url("../images/放贷威胁裁剪.png"), url("../images/生活开销裁剪.png");
     background-repeat: no-repeat;
     background-size: auto 36vh;
-    background-position: top right,top left,bottom right,bottom left;
+    background-position: top right, top left, bottom right, bottom left;
 }
 
 .img1-img1 {
@@ -303,12 +312,24 @@ article {
     display: flex;
 }
 
+.background1{
+    background-image: url("../images/背景1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: #862617;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
 .part4 {
     background: #862617;
-    background-image: url("../images/开心金手镯裁剪.png"),url("../images/出轨裁剪.png"),url("../images/放贷威胁裁剪.png"),url("../images/生活开销裁剪.png");
-    background-repeat: no-repeat;
-    background-size: auto 36vh;
-    background-position: top right 20vw ,top left 20vw,bottom right 20vw,bottom left 20vw;
     background-attachment: fixed;
     height: 100vh;
     scroll-snap-align: start;
@@ -316,6 +337,21 @@ article {
     justify-content: center;
     position: relative;
     display: flex;
+}
+
+.background2{
+    background-image: url("../images/开心金手镯裁剪.png"), url("../images/出轨裁剪.png"), url("../images/放贷威胁裁剪.png"), url("../images/生活开销裁剪.png");
+    background-repeat: no-repeat;
+    background-size: auto 36vh;
+    background-position: top right 20vw, top left 20vw, bottom right 20vw, bottom left 20vw;
+    background-attachment: fixed;
+    height: 100vh;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .part5 {
@@ -330,7 +366,6 @@ article {
     display: flex;
     flex-direction: column;
 }
-
 
 .part-Two,
 .part-Three,
