@@ -678,25 +678,10 @@
                 name: '各地区彩礼纠纷案件数',
                 map: 'chinaMap',
                 data: data,
-
-                visualMap: {
-                    type: 'continuous',
-                    left: 'right',
-                    min: 500000,
-                    max: 38000000,
-                    inRange: {
-                        // prettier-ignore
-                        color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
-                    },
-                    text: ['High', 'Low'],
-                    calculable: true
+                itemStyle:{
+                    borderColor: '#fff'
                 },
-
                 //roam: true, //允许拖动
-
-                label: {
-                    show: true, //展示名称
-                },
 
                 selectedMode: 'single',
                 zoom: 1.5,     //设置初始缩放比例
@@ -958,6 +943,7 @@
                 data: data1,
 
                 itemStyle: {
+                    borderColor: '#fff'
                 },
 
                 tooltip: {
@@ -1087,7 +1073,9 @@
                         }
                     }
                 },
-
+                itemStyle:{
+                    borderColor: '#fff'
+                },
                 label: {
                 },
 
