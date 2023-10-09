@@ -104,7 +104,7 @@ article {
 }
 
 .part1 {
-    background: url("../images/囍裁剪.png");
+    background: url("../images/樱花追车裁剪.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -125,11 +125,11 @@ article {
     height: 130vh;
 }
 
+.chat-center,
 .chat-right,
 .chat-left {
     /* background-color: #EDCB96; */
     background-color: rgba(237, 203, 150, 0.8);
-    border: 5px solid #CF4813;
     box-shadow: 10px 10px 10px 5px #000000;
     border-radius: 3em;
     background-attachment: scroll;
@@ -294,7 +294,6 @@ article {
 .text-img1-data {
     margin: auto;
     padding: 1rem 3rem;
-
 }
 
 .part3 {
@@ -328,6 +327,54 @@ article {
     display: flex;
 }
 
+.background3{
+    background-image: url("../images/背景3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: #862617;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.background5{
+    background-image: url("../images/背景2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: #862617;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.background4{
+    background-image: url("../images/背景4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: #862617;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
 .part4 {
     background: #862617;
     background-attachment: fixed;
@@ -342,11 +389,11 @@ article {
 .background2{
     background-image: url("../images/开心金手镯裁剪.png"), url("../images/出轨裁剪.png"), url("../images/放贷威胁裁剪.png"), url("../images/生活开销裁剪.png");
     background-repeat: no-repeat;
-    background-size: auto 36vh;
-    background-position: top right 20vw, top left 20vw, bottom right 20vw, bottom left 20vw;
+    background-size: auto 45vh;
+    background-position: top right 20vw, top left 20vw, bottom right 10vw, bottom left 20vw;
     background-attachment: fixed;
-    height: 100vh;
-    scroll-snap-align: start;
+    height: 400vh;
+    width: 80vw;
     align-items: center;
     justify-content: center;
     position: relative;
