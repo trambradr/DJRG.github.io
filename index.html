@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/base.css">
     <script src="js/echarts.js"></script>
     <script src="js/essos.js"></script>
+    <script src="js/china.js"></script>
     <title>Document</title>
 </head>
 
@@ -101,7 +102,8 @@
                 </p>
             </div>
         </div>
-        <div class="part1">
+
+        <div class="part1" style="height: 200vh;flex-direction: column;">
             <div class="text-view">
                 <p class="text-2">
                     但这份淡然与期待却并不多见：从金额来看，彩礼数额的商定多会参考当地习俗、双方情况，更图一个“吉利”数字如6.66万、8.88万；从谈判方式看，彩礼的决定往往汇集了双方本人、父母甚至近亲的态度，有时还需要相熟的中间人周旋传话。而谈判常常也会贯穿备婚期间，长期的意见不同一也可能导致婚礼时间的延迟、甚至是感情的破裂``````<br>
@@ -109,8 +111,8 @@
                 <p class="text-2">
                     彩礼本扎根于中华文化，以一种约定俗成的习俗被代代相传。但随着社会的转型与思想的解放，处于新旧夹缝中的彩礼被推上了风口浪尖，不管在现实生活还是网络讨论中均引发了巨大的矛盾。<br>
                 </p>
-                这里是数据【数据图 各地彩礼数目与平均数】【找一些学术上对于彩礼与婚姻观的比例 做一些引用】
             </div>
+            <div id="" style="height: 100vh;width: 60vw;"></div>
         </div>
     </article>
 
@@ -203,11 +205,7 @@
             </div>
         </div>
         <!-- 这里是人口性别比例统计图 -->
-        <div class="part2">
-
-            <div class="data">
-
-            </div>
+        <div class="part2" style="height: 200vh;flex-direction: column;">
 
             <!-- 数据集 -->
             <div class="text-view">
@@ -219,6 +217,7 @@
                     公职人员石头在江西九江进行彩礼调查时发现，调研样本多、范围大，彩礼问题的求证十分困难。加之彩礼话题敏感，很多乡村害怕负面影响，面对官方调查时刻意要求居民低报。也有部分居民会存在虚荣而高报彩礼，降低了调研的真实性和客观性。
                 </p>
             </div>
+            <div id="people" style="height: 100vh;width: 60vw;"></div>
         </div>
 
         <!-- 
@@ -317,7 +316,7 @@
             </div>
         </div>
         <!-- 这里是各地案例大地图 -->
-        <div class="part4">
+        <div class="part4" style="height: 200vh;flex-direction: column;">
             <div class="text-view">
                 <p class="text-2">
                     但原本作为经济保障的彩礼，其攀升的数额却可能先成为婚姻的“绊脚石”。据赵文淑，在徐州农村，高价彩礼与低收入的矛盾会导致部分家庭借钱出彩礼、租房结婚的现象，进而引发一系列矛盾冲突。百基拉江浙地区的朋友就有过类似经历：情侣二人感情很好，男方家庭是个体小商户，但女方家长提出了较高的彩礼。婚姻的成本超出了他们的支付能力，他因此和妻子产生了不少矛盾，两家人之间甚至“差点闹分”。
@@ -327,14 +326,18 @@
                     然而，有物质支撑的婚姻生活也难免出现纷争。当婚姻关系面临破裂的风险，彩礼作为具有财产性质的事物，往往会成为双方“争夺”的焦点。协商未果的双方往往最终选择走向法院。登录聚法案例网以“彩礼”为关键词搜索可以发现，相关案例高达18.67万条。彩礼法的应用影响着数以十万计的家庭。
                 </p>
             </div>
+            <div id="law" style="height: 100vh;width: 60vw;"></div>
         </div>
         <!-- 这里是彩礼与收入对比的数据 -->
         <div class="part4">
-            <div class="text-view">
+            <div id="return" style="height: 50vh; width: 50vw;"></div>
+            <div class="text-view" style="width: 30vw;">
                 <p class="text-2">
                     根据相关调研，在当前相关纠纷中，彩礼价值通常是个人可支配年收入的 3——10 倍以上，凝聚着男方巨大的精神与物质寄托，判决结果对双方都颇为重要。
                 </p>
             </div>
+
+            <div id="revenue" style="height: 50vh; width: 50vw;"></div>
         </div>
         <!-- 这里是法律内容示意图 -->
         <div class="part4">
@@ -596,7 +599,372 @@
         myChart.setOption(option);
     </script>
 
+    <!-- 各地案例 -->
+    <script>
+        let mylaw = echarts.init(document.getElementById('law'), 'essos')
+        // $.get('js/china.json', function (chinaJson) {
+        //     echarts.registerMap('chinaMap', chinaJson)
+        //     let option = {
+        //     geo:{
+        //         type: 'map',
+        //         map: 'chinaMap'
+        //     }
+        // }
+        // myChart.setOption(option)
+        // })
 
+        let data = [
+            { name: '河南省', value: 34125 },
+            { name: '甘肃省', value: 15829 },
+            { name: '安徽省', value: 15339 },
+            { name: '河北省', value: 14120 },
+            { name: '山东省', value: 12903 },
+            { name: '陕西省', value: 9941 },
+            { name: '江苏省', value: 9248 },
+            { name: '山西省', value: 8394 },
+            { name: '江西省', value: 6517 },
+            { name: '湖南省', value: 5881 },
+            { name: '吉林省', value: 5733 },
+            { name: '辽宁省', value: 5677 },
+            { name: '浙江省', value: 4375 },
+            { name: '湖北省', value: 4150 },
+            { name: '福建省', value: 3965 },
+            { name: '贵州省', value: 3791 },
+            { name: '内蒙古自治区', value: 3689 },
+            { name: '四川省', value: 3320 },
+            { name: '黑龙江省', value: 3042 },
+            { name: '宁夏回族自治区', value: 2907 },
+            { name: '云南省', value: 2393 },
+            { name: '青海省', value: 2362 },
+            { name: '重庆市', value: 1500 },
+            { name: '广西壮族自治区', value: 1444 },
+            { name: '广东省', value: 1424 },
+            { name: '上海市', value: 1321 },
+            { name: '北京市', value: 1247 },
+            { name: '天津市', value: 1167 },
+            { name: '新疆维吾尔自治区', value: 369 },
+            { name: '海南省', value: 95 },
+            { name: '西藏自治区', value: 23 },
+        ];
+
+        echarts.registerMap('chinaMap', chinaDate)
+        let lawoption = {
+            title: {
+                text: '各地区彩礼纠纷案件数'
+            },
+            tooltip: {
+                show: true,
+            },
+            series: {
+                type: 'map',
+                name: '各地区彩礼纠纷案件数',
+                map: 'chinaMap',
+                data: data,
+
+                visualMap: {
+                    type: 'continuous',
+                    left: 'right',
+                    min: 500000,
+                    max: 38000000,
+                    inRange: {
+                        // prettier-ignore
+                        color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
+                    },
+                    text: ['High', 'Low'],
+                    calculable: true
+                },
+
+                roam: true, //允许拖动
+
+                label: {
+                    show: true, //展示名称
+                },
+
+                selectedMode: 'single',
+                zoom: 1,     //设置初始缩放比例
+                // center: [] 设置初始中心
+
+                labelLayout: {
+                    hideOverlap: true,
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                    }
+                },
+
+            }
+        }
+        mylaw.setOption(lawoption)
+    </script>
+
+    <!-- 彩礼收入 -->
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        // 假设主题名称是 "vintage"
+        var myrevenue = echarts.init(document.getElementById('revenue'), 'essos');
+
+        // 指定图表的配置项和数据
+        let revenueoption = {
+            title: {
+                text: 'Waterfall Chart',
+                subtext: 'Living Expenses in Shenzhen'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                },
+                formatter: function (params) {
+                    var tar = params[1];
+                    return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                splitLine: { show: false },
+                data: ['3000元以下', '3000-6000元', '6000-10000元', '10000-20000元', '20000-50000元', '50000-100000元', '100000元以上', '总计']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: 'Placeholder',
+                    type: 'bar',
+                    stack: 'Total',
+                    itemStyle: {
+                        borderColor: 'transparent',
+                        color: 'transparent'
+                    },
+                    emphasis: {
+                        itemStyle: {
+                            borderColor: 'transparent',
+                            color: 'transparent'
+                        }
+                    },
+                    data: [0, 7.59, 27.84, 42.3 + 1.9, 58.76 + 1.9, 89.14 + 1.9, 95.47 + 1.9]
+                },
+                {
+                    name: 'Life Cost',
+                    type: 'bar',
+                    stack: 'Total',
+                    label: {
+                        show: true,
+                        position: 'inside'
+                    },
+                    data: [7.59, 20.25, 16.46, 16.46, 30.38, 6.33, 2.53, 100]
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myrevenue.setOption(revenueoption);
+    </script>
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        // 假设主题名称是 "vintage"
+        var myset = echarts.init(document.getElementById('return'), 'essos');
+
+        // 指定图表的配置项和数据
+        let setoption = {
+            title: {
+                text: 'Waterfall Chart',
+                subtext: 'Living Expenses in Shenzhen'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                },
+                formatter: function (params) {
+                    var tar = params[1];
+                    return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                splitLine: { show: false },
+                data: ['总计', '10000-50000元', '50000-150000元', '150000-250000元', '250000-500000元', '500000元以上']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: 'Placeholder',
+                    type: 'bar',
+                    stack: 'Total',
+                    itemStyle: {
+                        borderColor: 'transparent',
+                        color: 'transparent'
+                    },
+                    emphasis: {
+                        itemStyle: {
+                            borderColor: 'transparent',
+                            color: 'transparent'
+                        }
+                    },
+                    data: [0, 1.27 + 0.63 + 22.15 + 68.99, 1.27 + 0.63 + 22.15, 1.27 + 0.63, 1.27, 0]
+                },
+                {
+                    name: 'Life Cost',
+                    type: 'bar',
+                    stack: 'Total',
+                    label: {
+                        show: true,
+                        position: 'inside'
+                    },
+                    data: [100, 6.96, 68.99, 22.15, 0.63, 1.27]
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myset.setOption(setoption);
+    </script>
+
+    <!-- 男女比例 -->
+    <script>
+        let mypeople = echarts.init(document.getElementById('people'), 'essos')
+        // $.get('js/china.json', function (chinaJson) {
+        //     echarts.registerMap('chinaMap', chinaJson)
+        //     let option = {
+        //     geo:{
+        //         type: 'map',
+        //         map: 'chinaMap'
+        //     }
+        // }
+        // myChart.setOption(option)
+        // })
+
+
+        let data1 = [
+            { name: '北京市', men1: 1488424, women1: 1238238, radio1: 120.21, men2: 8937161, women2: 8814520, radio2: 101.39 },
+            { name: '天津市', men1: 1098351, women1: 1023218, radio1: 107.34, men2: 5610161, women2: 5322931, radio2: 105.4 },
+            { name: '河北省', men1: 15207373, women1: 14586376, radio1: 104.26, men2: 11010407, women2: 11119188, radio2: 99.02 },
+            { name: '山西省', men1: 6855573, women1: 6228549, radio1: 110.07, men2: 6588788, women2: 6608849, radio2: 99.7 },
+            { name: '内蒙古自治区', men1: 4136772, women1: 3684908, radio1: 112.26, men2: 4714495, women2: 4731924, radio2: 99.63 },
+            { name: '辽宁省', men1: 6070813, women1: 5794618, radio1: 104.77, men2: 12626419, women2: 12946058, radio2: 97.53 },
+            { name: '吉林省', men1: 4629137, women1: 4365302, radio1: 106.04, men2: 5028946, women2: 5262757, radio2: 95.56 },
+            { name: '黑龙江省', men1: 5640170, women1: 5312224, radio1: 106.17, men2: 7113464, women2: 7325934, radio2: 97.1 },
+            { name: '上海市', men1: 1508990, women1: 1152525, radio1: 130.93, men2: 10113562, women2: 9759518, radio2: 103.63 },
+            { name: '江苏省', men1: 11510786, women1: 10994847, radio1: 104.69, men2: 20382260, women2: 19887007, radio2: 102.49 },
+            { name: '浙江省', men1: 9445605, women1: 8523518, radio1: 110.82, men2: 17165183, women2: 15918609, radio2: 107.83 },
+            { name: '安徽省', men1: 13208668, women1: 12223400, radio1: 108.06, men2: 8142601, women2: 8186486, radio2: 99.46 },
+            { name: '福建省', men1: 6827964, women1: 6154875, radio1: 110.94, men2: 8780310, women2: 8324713, radio2: 105.47 },
+            { name: '江西省', men1: 9366260, women1: 8511764, radio1: 110.04, men2: 6906564, women2: 6653511, radio2: 103.8 },
+            { name: '山东省', men1: 19083645, women1: 18429554, radio1: 103.55, men2: 19843195, women2: 19613780, radio2: 101.17 },
+            { name: '河南省', men1: 22202937, women1: 22084028, radio1: 100.54, men2: 12913127, women2: 13060088, radio2: 98.87 },
+            { name: '湖北省', men1: 11290985, women1: 10141198, radio1: 111.34, men2: 12494860, women2: 12162561, radio2: 102.73 },
+            { name: '湖南省', men1: 14281054, women1: 13117634, radio1: 108.87, men2: 9472504, women2: 9444165, radio2: 100.3 },
+            { name: '广东省', men1: 17163861, women1: 15412577, radio1: 111.36, men2: 40817255, women2: 35570404, radio2: 114.75 },
+            { name: '广西省', men1: 12119132, women1: 10836716, radio1: 111.83, men2: 7458144, women2: 7329836, radio2: 101.75 },
+            { name: '海南省', men1: 2155432, women1: 1849819, radio1: 116.52, men2: 1967828, women2: 1793650, radio2: 109.71 },
+            { name: '重庆市', men1: 5169776, women1: 4620355, radio1: 111.89, men2: 8083520, women2: 8260469, radio2: 97.86 },
+            { name: '四川省', men1: 18870936, women1: 17338018, radio1: 108.84, men2: 15030432, women2: 15401247, radio2: 97.59 },
+            { name: '贵州省', men1: 9397708, women1: 8668494, radio1: 108.41, men2: 5086734, women2: 5039391, radio2: 100.94 },
+            { name: '云南省', men1: 12432456, women1: 11148257, radio1: 111.52, men2: 6236029, women2: 6119530, radio2: 101.9 },
+            { name: '西藏自治区', men1: 1216478, women1: 1128179, radio1: 107.83, men2: 447902, women2: 387400, radio2: 115.62 },
+            { name: '陕西省', men1: 7679000, women1: 7080269, radio1: 108.46, men2: 7925444, women2: 7730690, radio2: 102.52 },
+            { name: '甘肃省', men1: 6146432, women1: 5806067, radio1: 105.86, men2: 3565095, women2: 3530086, radio2: 100.99 },
+            { name: '青海省', men1: 1223114, women1: 1141480, radio1: 107.15, men2: 1081946, women2: 1042137, radio2: 103.82 },
+            { name: '宁夏回族自治区', men1: 1323169, women1: 1200831, radio1: 110.19, men2: 1488244, women2: 1500345, radio2: 99.19 },
+            { name: '新疆维吾尔族自治区', men1: 5844041, women1: 5394682, radio1: 108.33, men2: 4758895, women2: 4531596, radio2: 105.02 }
+        ]
+
+        var menDom1 = '<span style="width:10px;height:10px;margin-right:5px;background-color:#fff94f;border-radius:50%;display:inline-block;"></span>'
+        var womenDom = '<span style="width:10px;height:10px;margin-right:5px;background-color:#F7C4A5;border-radius:50%;display:inline-block;"></span>'
+        var menDom = '<span style="width:10px;height:10px;margin-right:5px;background-color:#d95850;border-radius:50%;display:inline-block;"></span>'
+        var huaweiDom = '<span style="width:10px;height:10px;margin-right:5px;background-color:#f00;border-radius:50%;display:inline-block;"></span>'
+        let radio = '<span style="font-weight:bolder;">性别比：</span>'
+
+        echarts.registerMap('chinaMap', chinaDate)
+        let peopleoption = {
+            title: {
+                text: '城镇乡村男女比例'
+            },
+            tooltip: {
+                show: true,
+                trigger: 'item'
+            },
+            series: {
+                type: 'map',
+                name: '城镇乡村男女比例',
+                map: 'chinaMap',
+                data: data1,
+
+                itemStyle: {
+                    // 设置外层边框
+                },
+
+                tooltip: {
+                    triggerOn: 'mousemove',
+                    // 处理悬浮提示
+                    formatter: (params) => {
+                        return (
+                            params.data.name + '<br/>' +
+                            '乡村' + '<br/>' +
+                            menDom + '男性：' + params.data.men1 + '<br/>' +
+                            womenDom + '女性：' + params.data.women1 + '<br/>' +
+                            radio + params.data.radio1 + '<br/>' +
+                            '<br/>' +
+                            '城镇' + '<br/>' +
+                            menDom + '男性：' + params.data.men2 + '<br/>' +
+                            womenDom + '女性：' + params.data.women2 + '<br/>' +
+                            radio + params.data.radio2 + '<br/>'
+                        )
+                    }
+                },
+                visualMap: {
+                    type: 'continuous',
+                    left: 'right',
+                    min: 500000,
+                    max: 38000000,
+                    inRange: {
+                        // prettier-ignore
+                        color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
+                    },
+                    text: ['High', 'Low'],
+                    calculable: true
+                },
+
+                roam: true, //允许拖动
+
+                label: {
+                    show: true, //展示名称
+                },
+
+                selectedMode: 'single',
+                zoom: 1,     //设置初始缩放比例
+                // center: [] 设置初始中心
+
+                labelLayout: {
+                    hideOverlap: true,
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                    }
+                },
+
+            }
+        }
+        mypeople.setOption(peopleoption)
+    </script>
 </body>
 
 </html>
