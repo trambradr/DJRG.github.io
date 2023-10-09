@@ -2,6 +2,10 @@ let headerH = document.querySelector("header").clientHeight;
 let part1H = document.querySelector(".part-One").clientHeight;
 let partZeroH = document.querySelector("#part-Zero").clientHeight;
 let partOneH = document.querySelector("#part-One").clientHeight;
+let part2H = document.querySelector(".part-Two").clientHeight;
+let partTwoH = document.querySelector("#part-Two").clientHeight
+let part3H = document.querySelector(".part-Three").clientHeight;
+let partThreeH = document.querySelector("#part-Three").clientHeight
 // 对话框
 
 
@@ -38,6 +42,29 @@ function showthat(scrollH) {
     }
     else{
         let hd1 = document.getElementById("hd2");
+        let tempBox = hd1.querySelector("div");
+        tempBox.className = "hdTitleOut";
+    };
+
+    if (scrollH >= headerH + partZeroH + partOneH +part1H +part2H +partTwoH -10){
+        // 小标题浮现效果
+        let hd1 = document.getElementById("hd3");
+        let tempBox = hd1.querySelector("div");
+        tempBox.className = "hdTitleIn";
+    }
+    else{
+        let hd1 = document.getElementById("hd3");
+        let tempBox = hd1.querySelector("div");
+        tempBox.className = "hdTitleOut";
+    };
+    if (scrollH >= headerH + partZeroH + partOneH +part1H +part2H +partTwoH + part3H +partThreeH -10){
+        // 小标题浮现效果
+        let hd1 = document.getElementById("hd4");
+        let tempBox = hd1.querySelector("div");
+        tempBox.className = "hdTitleIn";
+    }
+    else{
+        let hd1 = document.getElementById("hd4");
         let tempBox = hd1.querySelector("div");
         tempBox.className = "hdTitleOut";
     };
