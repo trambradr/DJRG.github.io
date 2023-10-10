@@ -167,6 +167,14 @@ article {
     overflow: auto;
 }
 
+.data1{
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .data {
     padding: 20px;
 }
@@ -295,6 +303,8 @@ article {
     margin: auto;
     padding: 1rem 3rem;
 }
+
+
 
 .part3 {
     background: url("../images/新婚快乐裁剪.png");
