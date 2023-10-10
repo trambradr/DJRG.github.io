@@ -41,6 +41,13 @@ header {
     src: url("../fonts/优设标题黑.ttf");
 }
 
+@font-face {
+    font-family: "思源宋体";
+    src: url("../fonts/SourceHanSerifCN-Regular-1.otf");
+}
+
+
+
 .cover div h1 {
     width: 100%;
     position: absolute;
@@ -181,7 +188,7 @@ article {
 
 .text-1 {
     font-size: 1.3em;
-    font-family: sans-serif;
+    font-family: '思源宋体';
     color: #000000;
 }
 
@@ -189,6 +196,7 @@ article {
     font-size: large;
     text-indent: 2em;
     line-height: 2.5em;
+    font-family: "思源宋体";
 }
 
 .text-data {
