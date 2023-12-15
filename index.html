@@ -144,7 +144,8 @@
                     尽管如此，徐州当地的彩礼始终有着“基准价”。城区的彩礼数目由本世纪初的<span
                         style="color: #ffb248;">1万1千元或3万3千元</span>附加房、车和首饰，上涨到最近的<span
                         style="color: #ffb248;">10万以上</span>；而农村地区彩礼数目一直高于城区，从早年的<span
-                        style="color: #ffb248;">6万6千元或8万8千元</span>加房和首饰，涨到了<span style="color: #ffb248;">18万8千元</span>。赵文淑收到的彩礼数额为最基准的1万1千元，她与家人并不计较其金额的多少，为此还曾被周围不少人看作“傻”。
+                        style="color: #ffb248;">6万6千元或8万8千元</span>加房和首饰，涨到了<span
+                        style="color: #ffb248;">18万8千元</span>。赵文淑收到的彩礼数额为最基准的1万1千元，她与家人并不计较其金额的多少，为此还曾被周围不少人看作“傻”。
                 </p>
             </div>
             <div class="data1">
@@ -445,7 +446,8 @@
                 </p>
                 <br>
                 <p class="text-2">
-                    同时，女性在家庭劳动中中仍然创造着更多的价值。全国妇联和国家统计局联合组织实施的第三期中国妇女社会地位调查结果显示：超过<span style="color: #ffb248;">七成</span>的已婚者认为，与丈夫相比，妻子承担了更多的家务劳动。当许多夫妻同样疲惫地下班，丈夫们仅需坐在沙发上等候晚餐，而妻子们则要奔向学校接孩子，然后换上围裙备菜、烹饪，饭后还需拖地、晾晒衣服、辅导孩子的功课。
+                    同时，女性在家庭劳动中中仍然创造着更多的价值。全国妇联和国家统计局联合组织实施的第三期中国妇女社会地位调查结果显示：超过<span
+                        style="color: #ffb248;">七成</span>的已婚者认为，与丈夫相比，妻子承担了更多的家务劳动。当许多夫妻同样疲惫地下班，丈夫们仅需坐在沙发上等候晚餐，而妻子们则要奔向学校接孩子，然后换上围裙备菜、烹饪，饭后还需拖地、晾晒衣服、辅导孩子的功课。
                 </p>
             </div>
             <iframe src="https://dycharts.com/xshow/index.html?id=c_70d64c7429127a05c6698c9234ecce6e" width="600"
@@ -520,7 +522,8 @@
 
     <!-- 南丁格尔图 -->
     <script type="text/javascript">
-        var composition = echarts.init(document.getElementById('composition'), 'essos');
+
+        var composition = echarts.init(document.getElementById('composition'), 'essos', { renderer: 'svg' });
 
         // 指定图表的配置项和数据
         var option = {
@@ -534,6 +537,16 @@
             },
             tooltip: {},
 
+            toolbox: {
+                show: true,
+                orient: "vertical",
+                left: "right",
+                top: "center",
+                feature: {
+                    saveAsImage: { show: true },  // 保存图表
+                },
+            },
+            
             legend: {
                 // Try 'horizontal'
                 orient: 'hotizontal',
@@ -597,7 +610,7 @@
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         // 假设主题名称是 "vintage"
-        var myChart = echarts.init(document.getElementById('belong'), 'essos');
+        var myChart = echarts.init(document.getElementById('belong'), 'essos',{ renderer: 'svg' });
 
         // 指定图表的配置项和数据
         var option = {
@@ -605,6 +618,16 @@
                 '#EDCB96',
                 '#F7C4A5'
             ],
+
+            toolbox: {
+                show: true,
+                orient: "vertical",
+                left: "right",
+                top: "top",
+                feature: {
+                    saveAsImage: { show: true },  // 保存图表
+                },
+            },
 
             title: {
                 text: '彩礼主体',
@@ -745,7 +768,7 @@
                 //roam: true, //允许拖动
 
                 selectedMode: 'single',
-                zoom: 1.5,     //设置初始缩放比例
+                zoom: 1.3,     //设置初始缩放比例
                 // center: [] 设置初始中心
                 top: '25%',
                 labelLayout: {
@@ -766,7 +789,7 @@
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         // 假设主题名称是 "vintage"
-        var myrevenue = echarts.init(document.getElementById('revenue'), 'essos');
+        var myrevenue = echarts.init(document.getElementById('revenue'), 'essos',{ renderer: 'svg' });
 
         // 指定图表的配置项和数据
         let revenueoption = {
@@ -786,6 +809,15 @@
                     var tar = params[1];
                     return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
                 }
+            },
+            toolbox: {
+                show: true,
+                orient: "vertical",
+                left: "right",
+                top: "top",
+                feature: {
+                    saveAsImage: { show: true },  // 保存图表
+                },
             },
             color: [
                 '#EDCB96'
@@ -841,7 +873,7 @@
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         // 假设主题名称是 "vintage"
-        var myset = echarts.init(document.getElementById('return'), 'essos');
+        var myset = echarts.init(document.getElementById('return'), 'essos',{ renderer: 'svg' });
 
         // 指定图表的配置项和数据
         let setoption = {
@@ -861,6 +893,15 @@
                     var tar = params[1];
                     return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
                 }
+            },
+            toolbox: {
+                show: true,
+                orient: "vertical",
+                left: "right",
+                top: "top",
+                feature: {
+                    saveAsImage: { show: true },  // 保存图表
+                },
             },
             color: [
                 '#EDCB96'
@@ -915,7 +956,7 @@
 
     <!-- 男女比例 -->
     <script>
-        let mypeople = echarts.init(document.getElementById('people'), 'essos')
+        let mypeople = echarts.init(document.getElementById('people'), 'essos',{ renderer: 'svg' })
         // $.get('js/china.json', function (chinaJson) {
         //     echarts.registerMap('chinaMap', chinaJson)
         //     let option = {
@@ -986,6 +1027,15 @@
                 show: true,
                 trigger: 'item'
             },
+            toolbox: {
+                show: true,
+                orient: "vertical",
+                left: "right",
+                top: "top",
+                feature: {
+                    saveAsImage: { show: true },  // 保存图表
+                },
+            },
             // visualMap: {//左下角的渐变颜色条
             //     min: 100,
             //     max: 128,
@@ -1041,7 +1091,7 @@
                 //roam: true, //允许拖动
 
                 selectedMode: 'single',
-                zoom: 1.5,     //设置初始缩放比例
+                zoom: 1.3,     //设置初始缩放比例
                 // center: [] 设置初始中心
                 top: '25%',
                 labelLayout: {
@@ -1153,7 +1203,7 @@
                 },
 
                 selectedMode: 'single',
-                zoom: 1.5,     //设置初始缩放比例
+                zoom: 1.3,     //设置初始缩放比例
                 // center: [] 设置初始中心
                 top: '25%',
                 labelLayout: {
