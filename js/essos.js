@@ -29,7 +29,7 @@
             "#f2d643",
             "#ebdba4"
         ],
-        "backgroundColor": "rgba(242,234,191,0.15)",
+        "backgroundColor": "#5e0707",
         "textStyle": {},
         "title": {
             "textStyle": {
